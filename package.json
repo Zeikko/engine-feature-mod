@@ -1,0 +1,11 @@
+{
+    "id" : "featureMod",
+    "name" : "Engine Feature Mod",
+    "version":"0.0.1",
+    "author":"Jaakko Ojalehto",
+    "url":"",
+    "description" : "Replaces game engine features. Adds feature combos with genres. ",
+    "main" : "./featureMod.js",
+    "dependencies" : {"gdt-modAPI":"0.1.x"},
+    "debug" : true
+}
