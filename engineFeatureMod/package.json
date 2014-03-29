@@ -1,11 +1,10 @@
-{
-    "id" : "featureMod",
-    "name" : "Engine Feature Mod",
-    "version":"0.0.1",
-    "author":"Jaakko Ojalehto",
-    "url":"",
-    "description" : "Game Dev Tycoon mod that adds more depth to the game engine features.",
-    "main" : "./featureMod.js",
-    "dependencies" : {"gdt-modAPI":"0.1.x"},
-    "debug" : true
+﻿{
+	"id" : "ExpPackMod",
+	"name" : "Expansion Pack Mod",
+	"version":"1.1.5",
+	"author":"DzjengisKhan (Founder & Leader) & LineLiar (Co-Leader)",
+	"url":"https://github.com/DzjengisKhan/GDT-Expansion-Pack",
+	"description" : "The one and only 'Expansion Pack Mod' for Game Dev Tycoon.",
+	"main" : "./ExpansionPack.js",
+	"dependencies" : {"UltimateLib":"1.x.x"}
 }
