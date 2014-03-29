@@ -1,7 +1,7 @@
-var FeatureModGraphic = {};
+var engineFeatureModGraphic = {};
 (function () {
 
-	FeatureModGraphic.addFeatures = function() {
+	engineFeatureModGraphic.addFeatures = function() {
 
 		console.log(Research.StartEngineParts);
 		//Research.engineItems = [Research.saveGame];

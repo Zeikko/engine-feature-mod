@@ -1,7 +1,7 @@
-var FeatureModEngine = {};
+var engineFeatureModEngine = {};
 (function () {
 
-	FeatureModEngine.addFeatures = function() {
+	engineFeatureModEngine.addFeatures = function() {
 
 		//Research.engineItems = [];
 

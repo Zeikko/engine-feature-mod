@@ -8,8 +8,8 @@
     };
 
 	var ready = function () {
-		FeatureModGraphic.addFeatures();
-		FeatureModEngine.addFeatures();
+		engineFeatureModGraphic.addFeatures();
+		engineFeatureModEngine.addFeatures();
 	};
 
 	var error = function() {
@@ -17,15 +17,15 @@
 	};
 
 	GDT.loadJs([
-		'mods/FeatureMod/features/engine.js',
-		'mods/FeatureMod/features/gameplay.js',
-		'mods/FeatureMod/features/story.js',
-		'mods/FeatureMod/features/dialoques.js',
-		'mods/FeatureMod/features/level-design.js',
-		'mods/FeatureMod/features/artificial-intelligence.js',
-		'mods/FeatureMod/features/graphic.js',
-		'mods/FeatureMod/features/sound.js',
-		'mods/FeatureMod/features/world-design.js',
+		'mods/engineFeatureMod/features/engine.js',
+		'mods/engineFeatureMod/features/gameplay.js',
+		'mods/engineFeatureMod/features/story.js',
+		'mods/engineFeatureMod/features/dialoques.js',
+		'mods/engineFeatureMod/features/level-design.js',
+		'mods/engineFeatureMod/features/artificial-intelligence.js',
+		'mods/engineFeatureMod/features/graphic.js',
+		'mods/engineFeatureMod/features/sound.js',
+		'mods/engineFeatureMod/features/world-design.js',
 	], ready, error);
 
 

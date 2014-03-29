@@ -1,7 +1,7 @@
-var FeatureModArtificialIntelligence = {};
+var engineFeatureModArtificialIntelligence = {};
 (function () {
 
-	FeatureModArtificialIntelligence.addFeatures = function() {
+	engineFeatureModArtificialIntelligence.addFeatures = function() {
 
 		Research.graphicItems = [];
 
