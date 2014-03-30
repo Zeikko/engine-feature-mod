@@ -92,8 +92,8 @@ var engineFeatureModGraphic = {};
 	        showXPGain: !0
 	    });
 	    Research.graphicItems.push({
-	        id: "Vector Wireframes",
-	        name: "Vector Wireframes".localize(),
+	        id: "Vector Wireframe Graphics",
+	        name: "Vector Wireframe Graphics".localize(),
 	        v: 2,
 	        techLevel: 1,
 	        canResearch: function (company) {
@@ -126,8 +126,8 @@ var engineFeatureModGraphic = {};
 	    /* === Tier 4 === */ 
 
 	    Research.graphicItems.push({
-	        id: "Pseudo 3D Rendering",
-	        name: "Pseudo 3D Rendering".localize(),
+	        id: "Pseudo 3D Graphics",
+	        name: "Pseudo 3D Graphics".localize(),
 	        v: 6,
 	        techLevel: 3,
 	        canResearch: function (company) {
@@ -184,8 +184,8 @@ var engineFeatureModGraphic = {};
 	    var tier = 6;
 
 	    Research.graphicItems.push({
-	        id: "Rasterisation 3D",
-	        name: "Rasterisation 3D".localize(),
+	        id: "Rasterisation 3D Graphics",
+	        name: "Rasterisation 3D Graphics".localize(),
 	        v: 10,
 	        techLevel: 5,
 	        canResearch: function (company) {
@@ -232,19 +232,13 @@ var engineFeatureModGraphic = {};
 	    });
 
 	    Research.graphicItems.push({
-	        id: "Shaders",
-	        name: "Shaders".localize(),
+	        id: "Software Shaders",
+	        name: "Software Shaders".localize(),
 	        v: 8,
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 6 && LevelCalculator.getMissionLevel('Engine') >= 6
 	        },
-	        canUse: function (game) {
-	            if (!game || !game.features) return !1;
-	            var requirement = "Rasterisation 3D;Raytracing 3D".split(";");
-	            return game.features.some(function (game) {
-	                return -1 != requirement.indexOf(game.id)
-	            })
-	        },
+	        canUse: require3D,
 	        genreAdjustments: {
 
 	        },
@@ -267,7 +261,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 7 && LevelCalculator.getMissionLevel('Engine') >= 7
 	        },
-	        canUse: requireGPUAnd3D,
+	        canUse: requireGPU && require3D,
 	        genreAdjustments: {
 
 	        },
@@ -287,13 +281,13 @@ var engineFeatureModGraphic = {};
 	    var tier = 8;
 
 	    Research.graphicItems.push({
-	        id: "Advanced Shaders",
-	        name: "Advanced Shaders".localize(),
+	        id: "Hardware Shaders",
+	        name: "Hardware Shaders".localize(),
 	        v: 10,
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 7 && LevelCalculator.getMissionLevel('Engine') >= 7
 	        },
-	        canUse: requireGPUAnd3D,
+	        canUse: requireGPU && require3D,
 	        genreAdjustments: {
 
 	        },
@@ -316,7 +310,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 7 && LevelCalculator.getMissionLevel('Engine') >= 7
 	        },
-	        canUse: requireGPUAnd3D,
+	        canUse: requireGPU && require3D,
 	        genreAdjustments: {
 
 	        },
@@ -339,7 +333,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 8 && LevelCalculator.getMissionLevel('Engine') >= 8
 	        },
-	        canUse: requireGPUAnd3D,
+	        canUse: requireGPU && require3D,
 	        genreAdjustments: {
 
 	        },
@@ -359,8 +353,8 @@ var engineFeatureModGraphic = {};
 	    var tier = 9;
 
 	    Research.graphicItems.push({
-	        id: "Raytracing 3D",
-	        name: "Raytracing 3D".localize(),
+	        id: "Raytracing 3D Graphics",
+	        name: "Raytracing 3D Graphics".localize(),
 	        v: 14,
 	        techLevel: 8,
 	        canResearch: function (company) {
@@ -389,7 +383,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 9 && LevelCalculator.getMissionLevel('Engine') >= 9
 	        },
-	        canUse: requireGPUAnd3D,
+	        canUse: requireGPU && require3D,
 	        genreAdjustments: {
 
 	        },
@@ -405,18 +399,20 @@ var engineFeatureModGraphic = {};
 	        consolePart: !0
 	    });
 
+		var requireGPU = function (game) {
+			if (!game || !game.features) return !1;
+	        var requirement = "GPU Support".split(";");
+	        return game.features.some(function (game) {
+	            return -1 != requirement.indexOf(game.id)
+	        })
+		}
 
-	    var requireGPUAnd3D = function (game) {
-	            if (!game || !game.features) return !1;
-	            var requirement = "Rasterisation 3D;Raytracing 3D".split(";");
-	            var GPUSupport = "GPU Support";
-	            var req1 = game.features.some(function (game) {
-	                return -1 != requirement.indexOf(game.id)
-	            })
-	            var req2 = game.features.some(function (game) {
-	                return -1 != GPUSupport.indexOf(game.id)
-	            })
-	            return req1 && req2;
-	        };
+		var require3D = function (game) {
+			if (!game || !game.features) return !1;
+	        var requirement = "Rasterisation 3D;Raytracing 3D".split(";");
+	        return game.features.some(function (game) {
+	            return -1 != requirement.indexOf(game.id)
+	        })
+		}
 	}
 })();
