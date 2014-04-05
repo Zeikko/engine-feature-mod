@@ -11,6 +11,7 @@
 		engineFeatureModGraphic.addFeatures();
 		engineFeatureModEngine.addFeatures();
 		engineFeatureModArtificialIntelligence.addFeatures();
+		engineFeatureModDialogues.addFeatures();
 		engineFeatureModAdjustment.register();
 	};
 

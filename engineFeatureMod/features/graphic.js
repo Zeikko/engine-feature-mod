@@ -238,7 +238,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 6 && LevelCalculator.getMissionLevel('Engine') >= 6
 	        },
-	        canUse: require3D,
+	        canUse: engineFeatureModGraphic.require3D,
 	        genreAdjustments: {
 
 	        },
@@ -261,7 +261,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 7 && LevelCalculator.getMissionLevel('Engine') >= 7
 	        },
-	        canUse: requireGPU && require3D,
+	        canUse: engineFeatureModGraphic.requireGPU && engineFeatureModGraphic.require3D,
 	        genreAdjustments: {
 
 	        },
@@ -287,7 +287,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 7 && LevelCalculator.getMissionLevel('Engine') >= 7
 	        },
-	        canUse: requireGPU && require3D,
+	        canUse: engineFeatureModGraphic.requireGPU && engineFeatureModGraphic.require3D,
 	        genreAdjustments: {
 
 	        },
@@ -310,7 +310,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 7 && LevelCalculator.getMissionLevel('Engine') >= 7
 	        },
-	        canUse: requireGPU && require3D,
+	        canUse: engineFeatureModGraphic.requireGPU && engineFeatureModGraphic.require3D,
 	        genreAdjustments: {
 
 	        },
@@ -333,7 +333,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 8 && LevelCalculator.getMissionLevel('Engine') >= 8
 	        },
-	        canUse: requireGPU && require3D,
+	        canUse: engineFeatureModGraphic.requireGPU && engineFeatureModGraphic.require3D,
 	        genreAdjustments: {
 
 	        },
@@ -383,7 +383,7 @@ var engineFeatureModGraphic = {};
 	        canResearch: function (a) {
 	            return LevelCalculator.getMissionLevel('Graphic') >= 9 && LevelCalculator.getMissionLevel('Engine') >= 9
 	        },
-	        canUse: requireGPU && require3D,
+	        canUse: engineFeatureModGraphic.requireGPU && engineFeatureModGraphic.require3D,
 	        genreAdjustments: {
 
 	        },
@@ -399,7 +399,7 @@ var engineFeatureModGraphic = {};
 	        consolePart: !0
 	    });
 
-		var requireGPU = function (game) {
+		engineFeatureModGraphic.requireGPU = function (game) {
 			if (!game || !game.features) return !1;
 	        var requirement = "GPU Support".split(";");
 	        return game.features.some(function (game) {
@@ -407,7 +407,7 @@ var engineFeatureModGraphic = {};
 	        })
 		}
 
-		var require3D = function (game) {
+		engineFeatureModGraphic.require3D = function (game) {
 			if (!game || !game.features) return !1;
 	        var requirement = "Rasterisation 3D;Raytracing 3D".split(";");
 	        return game.features.some(function (game) {
