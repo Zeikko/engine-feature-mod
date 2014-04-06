@@ -3,7 +3,7 @@ var engineFeatureModDialogues = {};
 
 	engineFeatureModDialogues.addFeatures = function() {
 
-		Research.dialogueItems = [];
+		Research.dialogItems = [];
 
 		/* === Start Engine Parts === */
 
@@ -11,7 +11,7 @@ var engineFeatureModDialogues = {};
 
 		/* === Tier 2 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Situational Dialogue",
 	        name: "Situational Dialogue".localize(),
 	        v: 1,
@@ -38,7 +38,7 @@ var engineFeatureModDialogues = {};
 
 	    /* === Tier 3 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Branching Dialogue",
 	        name: "Branching Dialogue".localize(),
 	        v: 2,
@@ -65,7 +65,7 @@ var engineFeatureModDialogues = {};
 
 	    /* === Tier 4 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Voice Acting",
 	        name: "Voice Acting".localize(),
 	        v: 4,
@@ -89,7 +89,7 @@ var engineFeatureModDialogues = {};
 
 	    /* === Tier 5 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Animation Graphs",
 	        name: "Animation Graphs".localize(),
 	        v: 4,
@@ -114,7 +114,7 @@ var engineFeatureModDialogues = {};
 
 	    /* === Tier 6 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Background Dialogue",
 	        name: "Background Dialogue".localize(),
 	        v: 6,
@@ -136,7 +136,7 @@ var engineFeatureModDialogues = {};
 	        experience: 0
 	    });
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Hub and Spokes Dialogue",
 	        name: "Hub and Spokes Dialogue".localize(),
 	        v: 6,
@@ -163,7 +163,7 @@ var engineFeatureModDialogues = {};
 
 	    /* === Tier 7 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Celebrity Voice Acting",
 	        name: "Celebrity Voice Acting".localize(),
 	        v: 8,
@@ -190,7 +190,7 @@ var engineFeatureModDialogues = {};
 
 	    /* === Tier 8 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Greenscreen Animations",
 	        name: "Greenscreen Animations".localize(),
 	        v: 10,
@@ -216,7 +216,7 @@ var engineFeatureModDialogues = {};
 
 	    /* === Tier 9 === */ 
 
-	    Research.graphicItems.push({
+	    Research.dialogItems.push({
 	        id: "Procedural Animations",
 	        name: "Procedural Animations".localize(),
 	        v: 12,
